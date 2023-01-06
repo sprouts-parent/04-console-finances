@@ -1,3 +1,35 @@
+/* My pseudocode for console finance challenge:
+
+1. Declare the variables required for the task
+    - total months
+    - total profit/loss
+    - average change
+    - greatest increase
+    - greatest decrease
+2. loop through the finances array and add an increment to increase total months value (for, ++)
+3. Profit/Losses over the entire period - add current profit/loss to the total profit loss
+    - if it's not the first month, calculate the change in profit/loss from the previous month (if statement)
+4. average change calculation and check if  the change is the greatest increase or greatest decrease (if else statements)
+5. calculate average change in profit /loss
+6. round the figures to the nearesst 100th (toFixed)
+7. print out the results to the console
+
+References used for this assignment:
+https://www.w3schools.com/js/js_operators.asp
+https://www.w3schools.com/js/js_loop_for.asp
+https://www.w3schools.com/jsref/jsref_tofixed.asp 
+Javascript A Beginners Guide by John Pollock (5th edition, 2020)
+Begin to Code with Javascript by Rob Miles (2022)
+
+
+
+*/
+
+
+
+
+
+
 var finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
