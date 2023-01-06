@@ -150,3 +150,9 @@ greatestDecrease[1] = change;
 //calculation for average change in profit/loss
 averageChange /= totalMonths - 1;
 
+// round figures to the nearest 100th (toFixed)
+totalProfitLoss = Number(totalProfitLoss.toFixed(2));
+averageChange = Number(averageChange.toFixed(2));
+greatestIncrease[1] = Number(greatestIncrease[1].toFixed(2));
+greatestDecrease[1] = Number(greatestDecrease[1].toFixed(2));
+
