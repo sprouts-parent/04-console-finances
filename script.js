@@ -146,3 +146,7 @@ greatestDecrease[0] = finances[i][0];
 greatestDecrease[1] = change;
 }
 }
+
+//calculation for average change in profit/loss
+averageChange /= totalMonths - 1;
+
