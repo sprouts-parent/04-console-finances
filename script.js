@@ -130,8 +130,19 @@ for (var i = 0; < finances.length; i++) {
 totalProfitLoss += finances[i][1]; // will loop through finances array
 
 // if statement to calculate change in profit/loss from the previous month - if it's not the first month (importnat)
-
 if (i > 0) {
     var change = finances[i][0] - finances [i - 1][1];
 }
 
+// add change variable to averageChange (addition assignment)
+averageChange += change;
+
+// check if the change is the greatest increase or decrease (if/else)
+if (change > greatestIncrease[1]) {
+    greatestIncrease[0] = finances[i][0];
+    greatestIncrease[1] = change;
+} else if (change < greatestDecrease[1]) {
+greatestDecrease[0] = finances[i][0];
+greatestDecrease[1] = change;
+}
+}
