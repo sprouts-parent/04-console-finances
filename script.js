@@ -156,3 +156,10 @@ averageChange = Number(averageChange.toFixed(2));
 greatestIncrease[1] = Number(greatestIncrease[1].toFixed(2));
 greatestDecrease[1] = Number(greatestDecrease[1].toFixed(2));
 
+//print financial analysis to the console
+console.log("Financial Analysis");
+console.log("Total months: " + totalMonths);
+console.log("Total Profit/loss $" + totalProfitLoss);
+console.log("Average change: $" + averageChange);
+console.log("Greatest increase: $" + greatestIncrease[0] + " (" + greatestIncrease[1] + ")");
+console.log("Greatest decrease: $" + greatestDecrease[0] + " (" + greatestDecrease[1] + ")");
