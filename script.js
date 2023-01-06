@@ -7,7 +7,7 @@
     - greatest increase
     - greatest decrease
 2. loop through the finances array and add an increment to increase total months value (for, ++)
-3. Profit/Losses over the entire period - add current profit/loss to the total profit loss
+3.  calculate Profit/Losses over the entire period - add current profit/loss to the total profit loss
     - if it's not the first month, calculate the change in profit/loss from the previous month (if statement)
 4. average change calculation and check if  the change is the greatest increase or greatest decrease (if else statements) aka largest number and smallest number
 5. calculate average change in profit /loss (total divided by number of months)
@@ -20,6 +20,7 @@ https://www.w3schools.com/js/js_loop_for.asp
 https://www.w3schools.com/jsref/jsref_tofixed.asp 
 Javascript A Beginners Guide by John Pollock (5th edition, 2020)
 Begin to Code with Javascript by Rob Miles (2022)
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment
 
 */
 
@@ -124,3 +125,13 @@ var greatesrDecrease = ["", 0]; //array
 for (var i = 0; < finances.length; i++) {
     totalMonths++; //increments total months by 1
 }
+
+//calculate total profit/loss - addition assignment required for this
+totalProfitLoss += finances[i][1]; // will loop through finances array
+
+// if statement to calculate change in profit/loss from the previous month - if it's not the first month (importnat)
+
+if (i > 0) {
+    var change = finances[i][0] - finances [i - 1][1];
+}
+
