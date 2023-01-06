@@ -120,3 +120,7 @@ var averageChange = 0;
 var greatestIncrease = ["", 0]; //array
 var greatesrDecrease = ["", 0]; //array
 
+//total months calculation -> loop through array and add increments
+for (var i = 0; < finances.length; i++) {
+    totalMonths++; //increments total months by 1
+}
