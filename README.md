@@ -22,7 +22,7 @@ N/A
 
 ## Usage
 
-To view the financial analysis of the dataset, follow the link to the deployed page:
+To view the financial analysis of the dataset, follow the link to the deployed page: https://sprouts-parent.github.io/04-console-finances/ 
 
 From there, just open the console within the inspector and you will see the print out of results.
 
