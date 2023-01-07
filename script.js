@@ -119,33 +119,34 @@ var totalMonths = 0;
 var totalProfitLoss = 0;
 var averageChange = 0;
 var greatestIncrease = ["", 0]; //array
-var greatesrDecrease = ["", 0]; //array
+var greatestDecrease = ["", 0]; //array / DEBUG corrected typo
 
-//total months calculation -> loop through array and add increments
-for (var i = 0; < finances.length; i++) {
+//total months calculation -> loop through array for each calculation
+for (var i = 0; i < finances.length; i++) { // DEBUG forgot to add i
     totalMonths++; //increments total months by 1
-}
+
 
 //calculate total profit/loss - addition assignment required for this
-totalProfitLoss += finances[i][1]; // will loop through finances array
+    totalProfitLoss += finances[i][1]; // will loop through finances array
 
 // if statement to calculate change in profit/loss from the previous month - if it's not the first month (importnat)
-if (i > 0) {
-    var change = finances[i][0] - finances [i - 1][1];
-}
+    if (i > 0) {
+        var change = finances[i][1] - finances [i - 1][1]; //DEBUG incorrectly placed curly bracket affecting loop
 
 // add change variable to averageChange (addition assignment)
-averageChange += change;
+        averageChange += change;
 
 // check if the change is the greatest increase or decrease (if/else)
-if (change > greatestIncrease[1]) {
-    greatestIncrease[0] = finances[i][0];
-    greatestIncrease[1] = change;
-} else if (change < greatestDecrease[1]) {
-greatestDecrease[0] = finances[i][0];
-greatestDecrease[1] = change;
-}
-}
+        if (change > greatestIncrease[1]) {
+            greatestIncrease[0] = finances[i][0];
+            greatestIncrease[1] = change;
+        } else if (change < greatestDecrease[1]) { //DEBUG neatened up indentations
+            greatestDecrease[0] = finances[i][0];
+            greatestDecrease[1] = change;
+        }
+    }
+} // DEBUG - closing curly bracket was on line 128 incorrectly
+
 
 //calculation for average change in profit/loss
 averageChange /= totalMonths - 1;
@@ -161,5 +162,5 @@ console.log("Financial Analysis");
 console.log("Total months: " + totalMonths);
 console.log("Total Profit/loss $" + totalProfitLoss);
 console.log("Average change: $" + averageChange);
-console.log("Greatest increase: $" + greatestIncrease[0] + " (" + greatestIncrease[1] + ")");
-console.log("Greatest decrease: $" + greatestDecrease[0] + " (" + greatestDecrease[1] + ")");
+console.log("Greatest increase: " + greatestIncrease[0] + " ($" + greatestIncrease[1] + ")");
+console.log("Greatest decrease: " + greatestDecrease[0] + " ($" + greatestDecrease[1] + ")");
